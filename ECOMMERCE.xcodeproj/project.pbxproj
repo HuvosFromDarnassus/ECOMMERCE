@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		65D1519228B2078800328084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1519128B2078800328084 /* AppDelegate.swift */; };
 		65D1519428B2078800328084 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1519328B2078800328084 /* SceneDelegate.swift */; };
-		65D1519628B2078800328084 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1519528B2078800328084 /* ViewController.swift */; };
 		65D1519928B2078800328084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D1519728B2078800328084 /* Main.storyboard */; };
 		65D1519B28B2078B00328084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D1519A28B2078B00328084 /* Assets.xcassets */; };
 		65D1519E28B2078B00328084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D1519C28B2078B00328084 /* LaunchScreen.storyboard */; };
@@ -37,13 +36,16 @@
 		65D1520528B210E100328084 /* MarkPro-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151EE28B210A400328084 /* MarkPro-MediumItalic.otf */; };
 		65D1520628B210E100328084 /* MarkPro-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151EF28B210A400328084 /* MarkPro-ExtraLight.otf */; };
 		65D1520728B210E100328084 /* MarkPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151E328B210A400328084 /* MarkPro-Bold.otf */; };
+		65D1520E28B236E400328084 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1520D28B236E400328084 /* MainViewController.swift */; };
+		65D1521328B237E800328084 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1521128B237E800328084 /* CategoryViewCell.swift */; };
+		65D1521428B237E800328084 /* CategoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D1521228B237E800328084 /* CategoryViewCell.xib */; };
+		65D1521728B23CC700328084 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1521628B23CC700328084 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		65D1518E28B2078800328084 /* ECOMMERCE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECOMMERCE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D1519128B2078800328084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65D1519328B2078800328084 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		65D1519528B2078800328084 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		65D1519828B2078800328084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65D1519A28B2078B00328084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65D1519D28B2078B00328084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,10 @@
 		65D151EF28B210A400328084 /* MarkPro-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-ExtraLight.otf"; sourceTree = "<group>"; };
 		65D151F028B210A400328084 /* MarkPro-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Thin.otf"; sourceTree = "<group>"; };
 		65D151F128B210A400328084 /* MarkPro-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-ThinItalic.otf"; sourceTree = "<group>"; };
+		65D1520D28B236E400328084 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		65D1521128B237E800328084 /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
+		65D1521228B237E800328084 /* CategoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewCell.xib; sourceTree = "<group>"; };
+		65D1521628B23CC700328084 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +114,6 @@
 				65D1519328B2078800328084 /* SceneDelegate.swift */,
 				65D1520A28B213E700328084 /* Supporting files */,
 				65D151A728B207C500328084 /* Models */,
-				65D1519528B2078800328084 /* ViewController.swift */,
 				65D151AC28B20B0F00328084 /* ViewModels */,
 				65D151B028B20C6F00328084 /* Views */,
 				65D1519A28B2078B00328084 /* Assets.xcassets */,
@@ -121,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				65D151A528B207BD00328084 /* MainProducts.swift */,
+				65D1521628B23CC700328084 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				65D151B128B20C7900328084 /* Storyboards */,
+				65D1520D28B236E400328084 /* MainViewController.swift */,
+				65D1521528B23A5A00328084 /* CategoryCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +211,15 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
+		65D1521528B23A5A00328084 /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				65D1521128B237E800328084 /* CategoryViewCell.swift */,
+				65D1521228B237E800328084 /* CategoryViewCell.xib */,
+			);
+			path = CategoryCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,6 +236,8 @@
 			dependencies = (
 			);
 			name = ECOMMERCE;
+			packageProductDependencies = (
+			);
 			productName = ECOMMERCE;
 			productReference = 65D1518E28B2078800328084 /* ECOMMERCE.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +266,8 @@
 				Base,
 			);
 			mainGroup = 65D1518528B2078700328084;
+			packageReferences = (
+			);
 			productRefGroup = 65D1518F28B2078800328084 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,6 +288,7 @@
 				65D151FD28B210E000328084 /* MarkPro-Book.otf in Resources */,
 				65D1520128B210E000328084 /* MarkPro-Thin.otf in Resources */,
 				65D151FC28B210E000328084 /* MarkPro-Light.otf in Resources */,
+				65D1521428B237E800328084 /* CategoryViewCell.xib in Resources */,
 				65D151FF28B210E000328084 /* MarkPro-Heavy.otf in Resources */,
 				65D151FB28B210E000328084 /* MarkPro-BoldItalic.otf in Resources */,
 				65D1519E28B2078B00328084 /* LaunchScreen.storyboard in Resources */,
@@ -294,10 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D1519628B2078800328084 /* ViewController.swift in Sources */,
+				65D1520E28B236E400328084 /* MainViewController.swift in Sources */,
 				65D151A928B2083200328084 /* Dynamic.swift in Sources */,
+				65D1521328B237E800328084 /* CategoryViewCell.swift in Sources */,
 				65D1519228B2078800328084 /* AppDelegate.swift in Sources */,
 				65D151A628B207BD00328084 /* MainProducts.swift in Sources */,
+				65D1521728B23CC700328084 /* Category.swift in Sources */,
 				65D151AF28B20B3100328084 /* Constants.swift in Sources */,
 				65D1519428B2078800328084 /* SceneDelegate.swift in Sources */,
 				65D151AB28B209DC00328084 /* MainViewModel.swift in Sources */,

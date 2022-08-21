@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkPro-Medium.otf">
+            <string>MarkPro-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="gTV-IL-0wX" customClass="CategoryViewCell" customModule="ECOMMERCE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="71" height="93"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="71" height="93"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ST9-du-dWl">
+                        <rect key="frame" x="0.0" y="0.5" width="71" height="70"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="71" id="5zd-xs-bRZ"/>
+                            <constraint firstAttribute="width" constant="71" id="gC1-p3-e2W"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WU-Yx-KhR">
+                        <rect key="frame" x="19" y="81" width="33" height="12"/>
+                        <fontDescription key="fontDescription" name="MarkPro-Medium" family="Mark Pro" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j94-JX-91h">
+                        <rect key="frame" x="21" y="20" width="29" height="31"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1WU-Yx-KhR" secondAttribute="bottom" id="3ts-Ez-h6a"/>
+                <constraint firstItem="j94-JX-91h" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="A9P-HR-Tts"/>
+                <constraint firstItem="1WU-Yx-KhR" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="K7x-lc-gaS"/>
+                <constraint firstItem="j94-JX-91h" firstAttribute="centerY" secondItem="ST9-du-dWl" secondAttribute="centerY" id="R59-lg-cbP"/>
+                <constraint firstAttribute="trailing" secondItem="ST9-du-dWl" secondAttribute="trailing" id="WBW-6Y-4Rl"/>
+                <constraint firstItem="j94-JX-91h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="21" id="aNf-MQ-KVa"/>
+                <constraint firstItem="ST9-du-dWl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ajl-3p-Wdb"/>
+                <constraint firstItem="1WU-Yx-KhR" firstAttribute="top" secondItem="j94-JX-91h" secondAttribute="bottom" constant="30" id="eQU-oD-odc"/>
+                <constraint firstItem="ST9-du-dWl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uXL-yl-OYF"/>
+                <constraint firstItem="j94-JX-91h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="zTP-sC-81y"/>
+            </constraints>
+            <size key="customSize" width="165" height="138"/>
+            <connections>
+                <outlet property="backgroundCircle" destination="ST9-du-dWl" id="BeZ-rO-hQt"/>
+                <outlet property="categoryImage" destination="j94-JX-91h" id="d0V-sq-fSK"/>
+                <outlet property="categoryLabel" destination="1WU-Yx-KhR" id="DNI-MA-ynV"/>
+            </connections>
+            <point key="canvasLocation" x="215.21739130434784" y="141.29464285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.43137254901960786" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

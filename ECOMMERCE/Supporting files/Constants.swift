@@ -8,6 +8,9 @@
 struct Constants {
     struct Main {
         static let APIString: String = "https://run.mocky.io/v3/654bd15e-b121-49ba-a588-960956b15175"
+        
+        static let categoryNibName: String = "CategoryViewCell"
+        static let categoryIdentifier: String = "categoryCell"
     }
     
     struct ProductDetails {
