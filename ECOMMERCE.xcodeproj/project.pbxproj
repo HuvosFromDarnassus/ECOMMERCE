@@ -13,6 +13,30 @@
 		65D1519928B2078800328084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D1519728B2078800328084 /* Main.storyboard */; };
 		65D1519B28B2078B00328084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D1519A28B2078B00328084 /* Assets.xcassets */; };
 		65D1519E28B2078B00328084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D1519C28B2078B00328084 /* LaunchScreen.storyboard */; };
+		65D151A628B207BD00328084 /* MainProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D151A528B207BD00328084 /* MainProducts.swift */; };
+		65D151A928B2083200328084 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D151A828B2083200328084 /* Dynamic.swift */; };
+		65D151AB28B209DC00328084 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D151AA28B209DC00328084 /* MainViewModel.swift */; };
+		65D151AF28B20B3100328084 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D151AE28B20B3100328084 /* Constants.swift */; };
+		65D151F428B210E000328084 /* MarkPro-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151F128B210A400328084 /* MarkPro-ThinItalic.otf */; };
+		65D151F528B210E000328084 /* MarkPro-HairlineItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151E428B210A400328084 /* MarkPro-HairlineItalic.otf */; };
+		65D151F628B210E000328084 /* MarkPro.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151E128B210A400328084 /* MarkPro.otf */; };
+		65D151F728B210E000328084 /* MarkPro-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151DE28B210A400328084 /* MarkPro-BlackItalic.otf */; };
+		65D151F828B210E000328084 /* MarkPro-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151E528B210A400328084 /* MarkPro-BookItalic.otf */; };
+		65D151F928B210E000328084 /* MarkPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151E728B210A400328084 /* MarkPro-Black.otf */; };
+		65D151FA28B210E000328084 /* MarkPro-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151EC28B210A400328084 /* MarkPro-LightItalic.otf */; };
+		65D151FB28B210E000328084 /* MarkPro-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151ED28B210A400328084 /* MarkPro-BoldItalic.otf */; };
+		65D151FC28B210E000328084 /* MarkPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151E028B210A400328084 /* MarkPro-Light.otf */; };
+		65D151FD28B210E000328084 /* MarkPro-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151DF28B210A400328084 /* MarkPro-Book.otf */; };
+		65D151FE28B210E000328084 /* MarkPro-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151EA28B210A400328084 /* MarkPro-HeavyItalic.otf */; };
+		65D151FF28B210E000328084 /* MarkPro-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151E228B210A400328084 /* MarkPro-Heavy.otf */; };
+		65D1520028B210E000328084 /* MarkPro-Hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151E628B210A400328084 /* MarkPro-Hairline.otf */; };
+		65D1520128B210E000328084 /* MarkPro-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151F028B210A400328084 /* MarkPro-Thin.otf */; };
+		65D1520228B210E100328084 /* MarkPro-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151EB28B210A400328084 /* MarkPro-ExtraLightItalic.otf */; };
+		65D1520328B210E100328084 /* MarkPro-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151E828B210A400328084 /* MarkPro-Italic.otf */; };
+		65D1520428B210E100328084 /* MarkPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151E928B210A400328084 /* MarkPro-Medium.otf */; };
+		65D1520528B210E100328084 /* MarkPro-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151EE28B210A400328084 /* MarkPro-MediumItalic.otf */; };
+		65D1520628B210E100328084 /* MarkPro-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151EF28B210A400328084 /* MarkPro-ExtraLight.otf */; };
+		65D1520728B210E100328084 /* MarkPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 65D151E328B210A400328084 /* MarkPro-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +48,30 @@
 		65D1519A28B2078B00328084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65D1519D28B2078B00328084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65D1519F28B2078B00328084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D151A528B207BD00328084 /* MainProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProducts.swift; sourceTree = "<group>"; };
+		65D151A828B2083200328084 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		65D151AA28B209DC00328084 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		65D151AE28B20B3100328084 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		65D151DE28B210A400328084 /* MarkPro-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-BlackItalic.otf"; sourceTree = "<group>"; };
+		65D151DF28B210A400328084 /* MarkPro-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Book.otf"; sourceTree = "<group>"; };
+		65D151E028B210A400328084 /* MarkPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Light.otf"; sourceTree = "<group>"; };
+		65D151E128B210A400328084 /* MarkPro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarkPro.otf; sourceTree = "<group>"; };
+		65D151E228B210A400328084 /* MarkPro-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Heavy.otf"; sourceTree = "<group>"; };
+		65D151E328B210A400328084 /* MarkPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Bold.otf"; sourceTree = "<group>"; };
+		65D151E428B210A400328084 /* MarkPro-HairlineItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-HairlineItalic.otf"; sourceTree = "<group>"; };
+		65D151E528B210A400328084 /* MarkPro-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-BookItalic.otf"; sourceTree = "<group>"; };
+		65D151E628B210A400328084 /* MarkPro-Hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Hairline.otf"; sourceTree = "<group>"; };
+		65D151E728B210A400328084 /* MarkPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Black.otf"; sourceTree = "<group>"; };
+		65D151E828B210A400328084 /* MarkPro-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Italic.otf"; sourceTree = "<group>"; };
+		65D151E928B210A400328084 /* MarkPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Medium.otf"; sourceTree = "<group>"; };
+		65D151EA28B210A400328084 /* MarkPro-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-HeavyItalic.otf"; sourceTree = "<group>"; };
+		65D151EB28B210A400328084 /* MarkPro-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		65D151EC28B210A400328084 /* MarkPro-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-LightItalic.otf"; sourceTree = "<group>"; };
+		65D151ED28B210A400328084 /* MarkPro-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-BoldItalic.otf"; sourceTree = "<group>"; };
+		65D151EE28B210A400328084 /* MarkPro-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-MediumItalic.otf"; sourceTree = "<group>"; };
+		65D151EF28B210A400328084 /* MarkPro-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-ExtraLight.otf"; sourceTree = "<group>"; };
+		65D151F028B210A400328084 /* MarkPro-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Thin.otf"; sourceTree = "<group>"; };
+		65D151F128B210A400328084 /* MarkPro-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-ThinItalic.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +106,101 @@
 			children = (
 				65D1519128B2078800328084 /* AppDelegate.swift */,
 				65D1519328B2078800328084 /* SceneDelegate.swift */,
+				65D1520A28B213E700328084 /* Supporting files */,
+				65D151A728B207C500328084 /* Models */,
 				65D1519528B2078800328084 /* ViewController.swift */,
-				65D1519728B2078800328084 /* Main.storyboard */,
+				65D151AC28B20B0F00328084 /* ViewModels */,
+				65D151B028B20C6F00328084 /* Views */,
 				65D1519A28B2078B00328084 /* Assets.xcassets */,
-				65D1519C28B2078B00328084 /* LaunchScreen.storyboard */,
 				65D1519F28B2078B00328084 /* Info.plist */,
 			);
 			path = ECOMMERCE;
+			sourceTree = "<group>";
+		};
+		65D151A728B207C500328084 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65D151A528B207BD00328084 /* MainProducts.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65D151AC28B20B0F00328084 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				65D151AD28B20B2000328084 /* Binding */,
+				65D151AA28B209DC00328084 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		65D151AD28B20B2000328084 /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				65D151A828B2083200328084 /* Dynamic.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		65D151B028B20C6F00328084 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65D151B128B20C7900328084 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		65D151B128B20C7900328084 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				65D1519728B2078800328084 /* Main.storyboard */,
+				65D1519C28B2078B00328084 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		65D151F228B210B200328084 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				65D151F328B210C600328084 /* Mark Pro */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		65D151F328B210C600328084 /* Mark Pro */ = {
+			isa = PBXGroup;
+			children = (
+				65D151E728B210A400328084 /* MarkPro-Black.otf */,
+				65D151DE28B210A400328084 /* MarkPro-BlackItalic.otf */,
+				65D151E328B210A400328084 /* MarkPro-Bold.otf */,
+				65D151ED28B210A400328084 /* MarkPro-BoldItalic.otf */,
+				65D151DF28B210A400328084 /* MarkPro-Book.otf */,
+				65D151E528B210A400328084 /* MarkPro-BookItalic.otf */,
+				65D151EF28B210A400328084 /* MarkPro-ExtraLight.otf */,
+				65D151EB28B210A400328084 /* MarkPro-ExtraLightItalic.otf */,
+				65D151E628B210A400328084 /* MarkPro-Hairline.otf */,
+				65D151E428B210A400328084 /* MarkPro-HairlineItalic.otf */,
+				65D151E228B210A400328084 /* MarkPro-Heavy.otf */,
+				65D151EA28B210A400328084 /* MarkPro-HeavyItalic.otf */,
+				65D151E828B210A400328084 /* MarkPro-Italic.otf */,
+				65D151E028B210A400328084 /* MarkPro-Light.otf */,
+				65D151EC28B210A400328084 /* MarkPro-LightItalic.otf */,
+				65D151E928B210A400328084 /* MarkPro-Medium.otf */,
+				65D151EE28B210A400328084 /* MarkPro-MediumItalic.otf */,
+				65D151F028B210A400328084 /* MarkPro-Thin.otf */,
+				65D151F128B210A400328084 /* MarkPro-ThinItalic.otf */,
+				65D151E128B210A400328084 /* MarkPro.otf */,
+			);
+			path = "Mark Pro";
+			sourceTree = "<group>";
+		};
+		65D1520A28B213E700328084 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				65D151F228B210B200328084 /* Fonts */,
+				65D151AE28B20B3100328084 /* Constants.swift */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +261,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D1520628B210E100328084 /* MarkPro-ExtraLight.otf in Resources */,
+				65D1520028B210E000328084 /* MarkPro-Hairline.otf in Resources */,
+				65D151F928B210E000328084 /* MarkPro-Black.otf in Resources */,
+				65D151FD28B210E000328084 /* MarkPro-Book.otf in Resources */,
+				65D1520128B210E000328084 /* MarkPro-Thin.otf in Resources */,
+				65D151FC28B210E000328084 /* MarkPro-Light.otf in Resources */,
+				65D151FF28B210E000328084 /* MarkPro-Heavy.otf in Resources */,
+				65D151FB28B210E000328084 /* MarkPro-BoldItalic.otf in Resources */,
 				65D1519E28B2078B00328084 /* LaunchScreen.storyboard in Resources */,
 				65D1519B28B2078B00328084 /* Assets.xcassets in Resources */,
+				65D151FA28B210E000328084 /* MarkPro-LightItalic.otf in Resources */,
+				65D151F628B210E000328084 /* MarkPro.otf in Resources */,
 				65D1519928B2078800328084 /* Main.storyboard in Resources */,
+				65D151F528B210E000328084 /* MarkPro-HairlineItalic.otf in Resources */,
+				65D151F428B210E000328084 /* MarkPro-ThinItalic.otf in Resources */,
+				65D151F728B210E000328084 /* MarkPro-BlackItalic.otf in Resources */,
+				65D151FE28B210E000328084 /* MarkPro-HeavyItalic.otf in Resources */,
+				65D1520328B210E100328084 /* MarkPro-Italic.otf in Resources */,
+				65D1520528B210E100328084 /* MarkPro-MediumItalic.otf in Resources */,
+				65D1520228B210E100328084 /* MarkPro-ExtraLightItalic.otf in Resources */,
+				65D151F828B210E000328084 /* MarkPro-BookItalic.otf in Resources */,
+				65D1520728B210E100328084 /* MarkPro-Bold.otf in Resources */,
+				65D1520428B210E100328084 /* MarkPro-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +295,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D1519628B2078800328084 /* ViewController.swift in Sources */,
+				65D151A928B2083200328084 /* Dynamic.swift in Sources */,
 				65D1519228B2078800328084 /* AppDelegate.swift in Sources */,
+				65D151A628B207BD00328084 /* MainProducts.swift in Sources */,
+				65D151AF28B20B3100328084 /* Constants.swift in Sources */,
 				65D1519428B2078800328084 /* SceneDelegate.swift in Sources */,
+				65D151AB28B209DC00328084 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +453,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,7 +465,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,6 +482,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +494,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
