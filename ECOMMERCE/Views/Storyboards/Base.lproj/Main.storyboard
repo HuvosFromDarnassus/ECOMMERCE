@@ -81,6 +81,12 @@
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot sales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t3-EK-GcT">
+                                <rect key="frame" x="17" y="339" width="113.5" height="32"/>
+                                <fontDescription key="fontDescription" name="MarkPro-Bold" family="Mark Pro" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yH1-QI-zrc">
                                 <rect key="frame" x="17" y="151" width="380" height="95"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,7 +101,7 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BvD-Ur-Onv">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BvD-Ur-Onv" userLabel="Search group">
                                 <rect key="frame" x="17" y="281" width="372" height="34"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Aej-oK-Iel">
@@ -117,11 +123,33 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aGz-qP-1oO">
+                                <rect key="frame" x="17" y="379" width="380" height="182"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="182" id="d2h-Zx-stK"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aRU-0c-XNV">
+                                    <size key="itemSize" width="380" height="182"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnh-Xj-35R">
+                                <rect key="frame" x="310" y="340" width="84" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="see more">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BvD-Ur-Onv" secondAttribute="trailing" constant="25" id="385-wN-fRl"/>
+                            <constraint firstItem="aGz-qP-1oO" firstAttribute="top" secondItem="7t3-EK-GcT" secondAttribute="bottom" constant="8" id="6JG-wo-yyM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i6b-j5-AxQ" secondAttribute="trailing" constant="35" id="756-QE-w4j"/>
                             <constraint firstItem="aSH-OP-a1O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mlx-TX-I9a" secondAttribute="trailing" constant="8" symbolic="YES" id="8jI-IF-moW"/>
                             <constraint firstItem="mlx-TX-I9a" firstAttribute="top" secondItem="7nj-fT-NPp" secondAttribute="bottom" constant="18" id="AmC-wf-Pgd"/>
@@ -131,15 +159,22 @@
                             <constraint firstItem="yH1-QI-zrc" firstAttribute="top" secondItem="mlx-TX-I9a" secondAttribute="bottom" constant="25" id="NTN-WN-qN4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aSH-OP-a1O" secondAttribute="trailing" constant="20" id="TYL-Dg-qLf"/>
                             <constraint firstItem="7nj-fT-NPp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UQ8-pD-J8c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aGz-qP-1oO" secondAttribute="trailing" constant="17" id="YdG-QX-UbR"/>
                             <constraint firstItem="BvD-Ur-Onv" firstAttribute="top" secondItem="yH1-QI-zrc" secondAttribute="bottom" constant="35" id="ajL-P7-Bkv"/>
+                            <constraint firstItem="7t3-EK-GcT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="fbm-lT-JVI"/>
+                            <constraint firstItem="7t3-EK-GcT" firstAttribute="top" secondItem="BvD-Ur-Onv" secondAttribute="bottom" constant="24" id="gN8-Ce-zJZ"/>
+                            <constraint firstItem="aGz-qP-1oO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="gYL-zn-bAn"/>
                             <constraint firstItem="yH1-QI-zrc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="m7e-he-sce"/>
                             <constraint firstItem="aSH-OP-a1O" firstAttribute="top" secondItem="i6b-j5-AxQ" secondAttribute="bottom" constant="28" id="n0y-UF-FuO"/>
+                            <constraint firstItem="mnh-Xj-35R" firstAttribute="top" secondItem="BvD-Ur-Onv" secondAttribute="bottom" constant="25" id="r6O-MT-0IV"/>
                             <constraint firstItem="mlx-TX-I9a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="rfl-R8-MYm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mnh-Xj-35R" secondAttribute="trailing" constant="20" id="vqp-t3-jkI"/>
                             <constraint firstItem="i6b-j5-AxQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="wTi-Tr-IHS"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="categoryCollectionView" destination="yH1-QI-zrc" id="bLn-gZ-8Dp"/>
+                        <outlet property="hotSalesCollectionView" destination="aGz-qP-1oO" id="BIY-Lb-QJr"/>
                         <outlet property="locationPullDownButton" destination="FqX-6R-CBG" id="3Bc-Ap-4Og"/>
                         <outlet property="qrButton" destination="qbQ-al-KhM" id="tAh-L6-T15"/>
                         <outlet property="searchBar" destination="Aej-oK-Iel" id="RIe-R5-Qte"/>

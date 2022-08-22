@@ -5,7 +5,7 @@
 //  Created by Daniel Tvorun on 21.08.2022.
 //
 
-class Dynamic<T> {
+final class Dynamic<T> {
     typealias Listener = (T) -> Void
     private var listener: Listener?
     

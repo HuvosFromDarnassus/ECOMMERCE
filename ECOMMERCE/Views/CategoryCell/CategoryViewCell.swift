@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryViewCell: UICollectionViewCell {
+final class CategoryViewCell: UICollectionViewCell {
     @IBOutlet weak var backgroundCircle: UIImageView!
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
