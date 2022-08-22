@@ -6,6 +6,12 @@
 //
 
 struct Constants {
+    struct Style {
+        static let accentColor: String = "AccentColor"
+        static let backgroundColor: String = "BackgroundColor"
+        static let backgroundGreyColor: String = "BackgroundGreyColor"
+    }
+    
     struct Main {
         static let APIString: String = "https://run.mocky.io/v3/654bd15e-b121-49ba-a588-960956b15175"
         

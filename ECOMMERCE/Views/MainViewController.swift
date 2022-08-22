@@ -10,6 +10,8 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet weak var locationPullDownButton: UIButton!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var qrButton: UIButton!
     
     private let viewModel: MainViewModel = MainViewModel()
     
@@ -17,6 +19,9 @@ class MainViewController: UIViewController {
     
     internal override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    internal override func viewWillAppear(_ animated: Bool) {
         setupViewController()
     }
     
@@ -25,6 +30,8 @@ class MainViewController: UIViewController {
     
     private func setupViewController() {
         setupCategoryCollectionView()
+        setupSerachBar()
+        setupQrButton()
     }
     
     private func setupCategoryCollectionView() {
@@ -38,6 +45,17 @@ class MainViewController: UIViewController {
         if let layout = categoryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.minimumLineSpacing = 21
         }
+    }
+    
+    private func setupSerachBar() {
+        searchBar.searchTextField.leftView?.tintColor = UIColor(named: Constants.Style.accentColor)
+        searchBar.searchTextField.backgroundColor = .white
+        searchBar.layer.shadowOffset = CGSize(width: 2, height: 2)
+        searchBar.layer.shadowOpacity = 0.1
+    }
+    
+    private func setupQrButton() {
+        qrButton.layer.cornerRadius = 16
     }
 }
 
@@ -55,7 +73,7 @@ extension MainViewController: UICollectionViewDataSource {
     
     private func setupCell(using index: Int, cell: inout CategoryViewCell) {
         if categories[index].isSelect {
-            cell.backgroundCircle.tintColor = UIColor(named: "AccentColor")
+            cell.backgroundCircle.tintColor = UIColor(named: Constants.Style.accentColor)
             cell.categoryImage.image = categories[index].image.selected
         } else {
             cell.backgroundCircle.tintColor = .white

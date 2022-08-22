@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -84,7 +83,7 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yH1-QI-zrc">
                                 <rect key="frame" x="17" y="151" width="380" height="95"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="j1m-SV-1zh"/>
                                 </constraints>
@@ -96,18 +95,43 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BvD-Ur-Onv">
+                                <rect key="frame" x="17" y="281" width="372" height="34"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Aej-oK-Iel">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                        <color key="barTintColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbQ-al-KhM">
+                                        <rect key="frame" x="338" y="0.0" width="34" height="34"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="9L7-hB-fIu"/>
+                                            <constraint firstAttribute="width" constant="34" id="xDY-0d-OEc"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="qrcode" catalog="system">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BvD-Ur-Onv" secondAttribute="trailing" constant="25" id="385-wN-fRl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i6b-j5-AxQ" secondAttribute="trailing" constant="35" id="756-QE-w4j"/>
                             <constraint firstItem="aSH-OP-a1O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mlx-TX-I9a" secondAttribute="trailing" constant="8" symbolic="YES" id="8jI-IF-moW"/>
                             <constraint firstItem="mlx-TX-I9a" firstAttribute="top" secondItem="7nj-fT-NPp" secondAttribute="bottom" constant="18" id="AmC-wf-Pgd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yH1-QI-zrc" secondAttribute="trailing" constant="17" id="BOX-my-MFf"/>
+                            <constraint firstItem="BvD-Ur-Onv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="HQG-ys-gYQ"/>
                             <constraint firstItem="7nj-fT-NPp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LkA-wF-qSZ"/>
                             <constraint firstItem="yH1-QI-zrc" firstAttribute="top" secondItem="mlx-TX-I9a" secondAttribute="bottom" constant="25" id="NTN-WN-qN4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aSH-OP-a1O" secondAttribute="trailing" constant="20" id="TYL-Dg-qLf"/>
                             <constraint firstItem="7nj-fT-NPp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UQ8-pD-J8c"/>
+                            <constraint firstItem="BvD-Ur-Onv" firstAttribute="top" secondItem="yH1-QI-zrc" secondAttribute="bottom" constant="35" id="ajL-P7-Bkv"/>
                             <constraint firstItem="yH1-QI-zrc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="m7e-he-sce"/>
                             <constraint firstItem="aSH-OP-a1O" firstAttribute="top" secondItem="i6b-j5-AxQ" secondAttribute="bottom" constant="28" id="n0y-UF-FuO"/>
                             <constraint firstItem="mlx-TX-I9a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="rfl-R8-MYm"/>
@@ -117,22 +141,22 @@
                     <connections>
                         <outlet property="categoryCollectionView" destination="yH1-QI-zrc" id="bLn-gZ-8Dp"/>
                         <outlet property="locationPullDownButton" destination="FqX-6R-CBG" id="3Bc-Ap-4Og"/>
+                        <outlet property="qrButton" destination="qbQ-al-KhM" id="tAh-L6-T15"/>
+                        <outlet property="searchBar" destination="Aej-oK-Iel" id="RIe-R5-Qte"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="98"/>
+            <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="filterIcon" width="11" height="13"/>
         <image name="locationIcon" width="12" height="16"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.43137254901960786" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
