@@ -14,7 +14,7 @@ final class HotSalesViewCell: UICollectionViewCell {
     @IBOutlet weak var subtitle: UILabel!
     @IBOutlet weak var buyButton: UIButton!
     
-    override func awakeFromNib() {
+    internal override func awakeFromNib() {
         super.awakeFromNib()
         setupCell()
     }

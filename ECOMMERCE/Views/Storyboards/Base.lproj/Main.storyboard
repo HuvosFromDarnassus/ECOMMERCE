@@ -144,6 +144,33 @@
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best seller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLV-sO-uhL">
+                                <rect key="frame" x="17" y="585" width="126" height="32"/>
+                                <fontDescription key="fontDescription" name="MarkPro-Bold" family="Mark Pro" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnM-SZ-PVq">
+                                <rect key="frame" x="310" y="586" width="84" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="see more">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EtJ-Di-25P">
+                                <rect key="frame" x="17" y="625" width="380" height="227"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="227" id="bSc-ah-0A8"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Eka-y4-XLb">
+                                    <size key="itemSize" width="181" height="227"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -154,13 +181,21 @@
                             <constraint firstItem="aSH-OP-a1O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mlx-TX-I9a" secondAttribute="trailing" constant="8" symbolic="YES" id="8jI-IF-moW"/>
                             <constraint firstItem="mlx-TX-I9a" firstAttribute="top" secondItem="7nj-fT-NPp" secondAttribute="bottom" constant="18" id="AmC-wf-Pgd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yH1-QI-zrc" secondAttribute="trailing" constant="17" id="BOX-my-MFf"/>
+                            <constraint firstItem="EtJ-Di-25P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EXh-sX-W8Y"/>
                             <constraint firstItem="BvD-Ur-Onv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="HQG-ys-gYQ"/>
                             <constraint firstItem="7nj-fT-NPp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LkA-wF-qSZ"/>
                             <constraint firstItem="yH1-QI-zrc" firstAttribute="top" secondItem="mlx-TX-I9a" secondAttribute="bottom" constant="25" id="NTN-WN-qN4"/>
+                            <constraint firstItem="zLV-sO-uhL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="OMV-nL-HWD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aSH-OP-a1O" secondAttribute="trailing" constant="20" id="TYL-Dg-qLf"/>
                             <constraint firstItem="7nj-fT-NPp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UQ8-pD-J8c"/>
+                            <constraint firstItem="zLV-sO-uhL" firstAttribute="top" secondItem="aGz-qP-1oO" secondAttribute="bottom" constant="24" id="Xhw-7q-x6k"/>
+                            <constraint firstItem="CnM-SZ-PVq" firstAttribute="top" secondItem="aGz-qP-1oO" secondAttribute="bottom" constant="25" id="Xq5-g1-5KP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aGz-qP-1oO" secondAttribute="trailing" constant="17" id="YdG-QX-UbR"/>
                             <constraint firstItem="BvD-Ur-Onv" firstAttribute="top" secondItem="yH1-QI-zrc" secondAttribute="bottom" constant="35" id="ajL-P7-Bkv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CnM-SZ-PVq" secondAttribute="trailing" constant="20" id="bnJ-3I-Lyr"/>
+                            <constraint firstItem="EtJ-Di-25P" firstAttribute="trailing" secondItem="aGz-qP-1oO" secondAttribute="trailing" id="cHG-f5-DcX"/>
+                            <constraint firstItem="EtJ-Di-25P" firstAttribute="leading" secondItem="zLV-sO-uhL" secondAttribute="leading" id="d3r-vS-xwx"/>
+                            <constraint firstItem="EtJ-Di-25P" firstAttribute="top" secondItem="zLV-sO-uhL" secondAttribute="bottom" constant="8" id="fHp-IR-fu8"/>
                             <constraint firstItem="7t3-EK-GcT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="fbm-lT-JVI"/>
                             <constraint firstItem="7t3-EK-GcT" firstAttribute="top" secondItem="BvD-Ur-Onv" secondAttribute="bottom" constant="24" id="gN8-Ce-zJZ"/>
                             <constraint firstItem="aGz-qP-1oO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="gYL-zn-bAn"/>
@@ -174,6 +209,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bestSellerCollectionView" destination="EtJ-Di-25P" id="OG0-9a-hfw"/>
                         <outlet property="categoryCollectionView" destination="yH1-QI-zrc" id="bLn-gZ-8Dp"/>
                         <outlet property="hotSalesCollectionView" destination="aGz-qP-1oO" id="BIY-Lb-QJr"/>
                         <outlet property="locationPullDownButton" destination="FqX-6R-CBG" id="3Bc-Ap-4Og"/>

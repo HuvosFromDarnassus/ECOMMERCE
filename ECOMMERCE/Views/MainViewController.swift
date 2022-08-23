@@ -13,6 +13,7 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var qrButton: UIButton!
     @IBOutlet weak var hotSalesCollectionView: UICollectionView!
+    @IBOutlet weak var bestSellerCollectionView: UICollectionView!
     
     private let viewModel: MainViewModel = MainViewModel()
     
@@ -20,6 +21,9 @@ final class MainViewController: UIViewController {
     
     private var hotSalesTextData: [HomeStore] = []
     private var hotSalesImages: [UIImage] = []
+    
+    private var bestSellerTextData: [BestSeller] = []
+    private var bestSellerImages: [UIImage] = []
     
     internal override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +46,10 @@ extension MainViewController: ViewModelBindable {
             self.hotSalesTextData = data
         }
         
+        viewModel.bestSellerOutput.bind { data in
+            self.bestSellerTextData = data
+        }
+        
         viewModel.homeStoreImages.bind { data in
             data.forEach { dataElement in
                 self.hotSalesImages.append(UIImage(data: dataElement)!)
@@ -49,6 +57,16 @@ extension MainViewController: ViewModelBindable {
             
             DispatchQueue.main.async {
                 self.hotSalesCollectionView.reloadData()
+            }
+        }
+        
+        viewModel.bestSellerImages.bind { data in
+            data.forEach { dataElement in
+                self.bestSellerImages.append(UIImage(data: dataElement)!)
+            }
+            
+            DispatchQueue.main.async {
+                self.bestSellerCollectionView.reloadData()
             }
         }
     }
@@ -59,6 +77,7 @@ extension MainViewController: ViewControllerSetupable {
     internal func setupViewController() {
         setupCategoryCollectionView()
         setupHotSalesCollectionView()
+        setupBestSellerCollectionView()
         setupSerachBar()
         setupQrButton()
     }
@@ -68,13 +87,19 @@ extension MainViewController: ViewControllerSetupable {
         categoryCollectionView.dataSource = self
         categoryCollectionView.register(UINib(nibName: Constants.Main.categoryNibName, bundle: nil), forCellWithReuseIdentifier: Constants.Main.categoryIdentifier)
         selectCategory(number: 0)
-        setupCollectionCellSize(for: categoryCollectionView, itemsPerRow: 4, cellHeight: 93)
+        setupCollectionCellSize(for: categoryCollectionView, itemsPerRow: 4, cellHeight: 93, scrollDirection: .horizontal)
     }
     
     private func setupHotSalesCollectionView() {
         hotSalesCollectionView.dataSource = self
         hotSalesCollectionView.register(UINib(nibName: Constants.Main.hotSalesNibName, bundle: nil), forCellWithReuseIdentifier: Constants.Main.hotSalesIdentifier)
-        setupCollectionCellSize(for: hotSalesCollectionView, itemsPerRow: 1, cellHeight: 182)
+        setupCollectionCellSize(for: hotSalesCollectionView, itemsPerRow: 1, cellHeight: 182, scrollDirection: .horizontal)
+    }
+    
+    private func setupBestSellerCollectionView() {
+        bestSellerCollectionView.dataSource = self
+        bestSellerCollectionView.register(UINib(nibName: Constants.Main.bestSellerNibName, bundle: nil), forCellWithReuseIdentifier: Constants.Main.bestSellerIdentifier)
+        setupCollectionCellSize(for: bestSellerCollectionView, itemsPerRow: 2, cellHeight: 227, scrollDirection: .vertical)
     }
     
     private func setupSerachBar() {
@@ -91,20 +116,21 @@ extension MainViewController: ViewControllerSetupable {
 
 // MARK: - CollectionViewSetupable
 extension MainViewController: CollectionViewSetupable {
-    internal func setupCollectionCellSize(for collectionView: UICollectionView, itemsPerRow: Int, cellHeight: Int) {
+    internal func setupCollectionCellSize(for collectionView: UICollectionView, itemsPerRow: Int, cellHeight: Int, scrollDirection: UICollectionView.ScrollDirection) {
         var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         let screenSize = UIScreen.main.bounds
         let itemSize = CGSize(width: Int(screenSize.width - 35) / itemsPerRow - 1, height: cellHeight)
         
-        setupCellLayout(using: &layout, itemSize)
+        setupCellLayout(using: &layout, itemSize, direction: scrollDirection)
         
         collectionView.collectionViewLayout = layout
     }
     
-    internal func setupCellLayout(using layout: inout UICollectionViewFlowLayout, _ itemSize: CGSize) {
-        layout.scrollDirection = .horizontal
+    internal func setupCellLayout(using layout: inout UICollectionViewFlowLayout, _ itemSize: CGSize, direction: UICollectionView.ScrollDirection) {
+        layout.scrollDirection = direction
         layout.itemSize = itemSize
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 1, left: 0, bottom: 1, right: 0)
+        layout.minimumInteritemSpacing = 1
         layout.minimumLineSpacing = 2
     }
 }
@@ -118,6 +144,9 @@ extension MainViewController: UICollectionViewDataSource {
             
         case self.hotSalesCollectionView:
             return hotSalesTextData.count
+            
+        case self.bestSellerCollectionView:
+            return bestSellerTextData.count
             
         default:
             return 0
@@ -134,6 +163,11 @@ extension MainViewController: UICollectionViewDataSource {
         case self.hotSalesCollectionView:
             var cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Main.hotSalesIdentifier, for: indexPath) as! HotSalesViewCell
             setupHotSalesCell(using: indexPath.row, cell: &cell)
+            return cell
+            
+        case self.bestSellerCollectionView:
+            var cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Main.bestSellerIdentifier, for: indexPath) as! BestSellerViewCell
+            setupBestSellerCell(using: indexPath.row, cell: &cell)
             return cell
             
         default:
@@ -156,7 +190,7 @@ extension MainViewController: UICollectionViewDataSource {
     private func setupHotSalesCell(using index: Int, cell: inout HotSalesViewCell) {
         let textData = hotSalesTextData[index]
         
-        cell.layer.cornerRadius = 5
+        cell.layer.cornerRadius = 10
         
         cell.backgroundImage.image = hotSalesImages[index]
         cell.title.text = textData.title
@@ -165,6 +199,20 @@ extension MainViewController: UICollectionViewDataSource {
         if let _ = textData.isNew {
             cell.isNewView.isHidden = false
         }
+    }
+    
+    private func setupBestSellerCell(using index: Int, cell: inout BestSellerViewCell) {
+        let textData = bestSellerTextData[index]
+        
+        cell.layer.cornerRadius = 10
+        
+        cell.productImage.image = bestSellerImages[index]
+        cell.setPrice(String(textData.priceWithoutDiscount))
+        cell.setDiscountPrice(String(textData.discountPrice))
+        cell.productNameLabel.text = textData.title
+        
+        
+        cell.isFavoriteImage.image = textData.isFavorites ? UIImage(named: "likeFillIcon") : UIImage(named: "likeIcon")
     }
 }
 

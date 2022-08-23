@@ -20,6 +20,9 @@ struct Constants {
         
         static let hotSalesNibName: String = "HotSalesViewCell"
         static let hotSalesIdentifier: String = "hotSalesCell"
+        
+        static let bestSellerNibName: String = "BestSellerViewCell"
+        static let bestSellerIdentifier: String = "bestSellerCell"
     }
     
     struct ProductDetails {
