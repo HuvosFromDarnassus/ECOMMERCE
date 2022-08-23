@@ -66,19 +66,15 @@ extension MainViewController: ViewControllerSetupable {
     private func setupCategoryCollectionView() {
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
-        
         categoryCollectionView.register(UINib(nibName: Constants.Main.categoryNibName, bundle: nil), forCellWithReuseIdentifier: Constants.Main.categoryIdentifier)
-        
         selectCategory(number: 0)
-        
-        if let layout = categoryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.minimumLineSpacing = 21
-        }
+        setupCollectionCellSize(for: categoryCollectionView, itemsPerRow: 4, cellHeight: 93)
     }
     
     private func setupHotSalesCollectionView() {
         hotSalesCollectionView.dataSource = self
         hotSalesCollectionView.register(UINib(nibName: Constants.Main.hotSalesNibName, bundle: nil), forCellWithReuseIdentifier: Constants.Main.hotSalesIdentifier)
+        setupCollectionCellSize(for: hotSalesCollectionView, itemsPerRow: 1, cellHeight: 182)
     }
     
     private func setupSerachBar() {
@@ -90,6 +86,26 @@ extension MainViewController: ViewControllerSetupable {
     
     private func setupQrButton() {
         qrButton.layer.cornerRadius = 16
+    }
+}
+
+// MARK: - CollectionViewSetupable
+extension MainViewController: CollectionViewSetupable {
+    internal func setupCollectionCellSize(for collectionView: UICollectionView, itemsPerRow: Int, cellHeight: Int) {
+        var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let screenSize = UIScreen.main.bounds
+        let itemSize = CGSize(width: Int(screenSize.width - 35) / itemsPerRow - 1, height: cellHeight)
+        
+        setupCellLayout(using: &layout, itemSize)
+        
+        collectionView.collectionViewLayout = layout
+    }
+    
+    internal func setupCellLayout(using layout: inout UICollectionViewFlowLayout, _ itemSize: CGSize) {
+        layout.scrollDirection = .horizontal
+        layout.itemSize = itemSize
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.minimumLineSpacing = 2
     }
 }
 

@@ -9,7 +9,7 @@ import UIKit
 
 enum CollectoinType {
     case homeStore
-    case bestseller
+    case bestSeller
 }
 
 final class MainViewModel {
@@ -36,15 +36,15 @@ final class MainViewModel {
                 self.homeStoreOutput.value = allProducts.homeStore
                 self.bestSellerOutput.value = allProducts.bestSeller
                 
-                self.downloadImages(for: .homeStore, by: allProducts.homeStore.map { $0.picture })
-                self.downloadImages(for: .bestseller, by: allProducts.bestSeller.map { $0.picture })
+                self.downloadImages(for: .homeStore, using: allProducts.homeStore.map { $0.picture })
+                self.downloadImages(for: .bestSeller, using: allProducts.bestSeller.map { $0.picture })
             } catch {
                 print("MAIN VIEWMODEL JSON ERROR: \(error)")
             }
         }.resume()
     }
     
-    private func downloadImages(for type: CollectoinType, by urls: [String]) {
+    private func downloadImages(for type: CollectoinType, using urls: [String]) {
         var images: [Data] = []
         
         let group = DispatchGroup()
@@ -70,7 +70,7 @@ final class MainViewModel {
             switch type {
             case .homeStore:
                 self.homeStoreImages.value = images
-            case .bestseller:
+            case .bestSeller:
                 self.bestSellerImages.value = images
             }
         }
