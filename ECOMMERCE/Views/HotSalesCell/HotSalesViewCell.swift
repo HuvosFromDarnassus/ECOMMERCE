@@ -21,5 +21,6 @@ final class HotSalesViewCell: UICollectionViewCell {
     
     private func setupCell() {
         isNewView.layer.cornerRadius = 15
+        buyButton.titleLabel?.font = .boldSystemFont(ofSize: 11)
     }
 }

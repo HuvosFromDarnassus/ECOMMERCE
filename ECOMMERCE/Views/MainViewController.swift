@@ -14,6 +14,7 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var qrButton: UIButton!
     @IBOutlet weak var hotSalesCollectionView: UICollectionView!
     @IBOutlet weak var bestSellerCollectionView: UICollectionView!
+    @IBOutlet weak var footerView: UIView!
     
     private let viewModel: MainViewModel = MainViewModel()
     
@@ -80,6 +81,7 @@ extension MainViewController: ViewControllerSetupable {
         setupBestSellerCollectionView()
         setupSerachBar()
         setupQrButton()
+        setupFooter()
     }
     
     private func setupCategoryCollectionView() {
@@ -111,6 +113,10 @@ extension MainViewController: ViewControllerSetupable {
     
     private func setupQrButton() {
         qrButton.layer.cornerRadius = 16
+    }
+    
+    private func setupFooter() {
+        footerView.layer.cornerRadius = 30
     }
 }
 

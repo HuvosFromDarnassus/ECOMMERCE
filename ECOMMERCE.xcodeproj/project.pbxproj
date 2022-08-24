@@ -228,11 +228,11 @@
 		65D151B028B20C6F00328084 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				65D151B128B20C7900328084 /* Storyboards */,
 				65D1520D28B236E400328084 /* MainViewController.swift */,
 				65D1521528B23A5A00328084 /* CategoryCell */,
 				6589EB9628B36408002693D9 /* HotSalesCell */,
 				6589EBB728B4C7B8002693D9 /* BestSellerCell */,
+				65D151B128B20C7900328084 /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
