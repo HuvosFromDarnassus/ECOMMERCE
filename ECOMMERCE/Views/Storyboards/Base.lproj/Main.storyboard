@@ -411,15 +411,75 @@
                         <outlet property="qrButton" destination="qbQ-al-KhM" id="tAh-L6-T15"/>
                         <outlet property="searchBar" destination="Aej-oK-Iel" id="RIe-R5-Qte"/>
                         <outlet property="sizeDropDown" destination="CFB-zz-AQt" id="fSE-lH-RmL"/>
+                        <segue destination="me1-LM-Tid" kind="presentation" identifier="goToProductDetails" modalPresentationStyle="fullScreen" id="vg7-Ob-V8e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
         </scene>
+        <!--Product Details View Controller-->
+        <scene sceneID="QKq-q2-TPQ">
+            <objects>
+                <viewController id="me1-LM-Tid" customClass="ProductDetailsViewController" customModule="ECOMMERCE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4yL-fJ-cwk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="CDl-Bf-gkR">
+                                <rect key="frame" x="42" y="54" width="330" height="37"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hM-av-0Y6">
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="9aN-PG-YoI"/>
+                                            <constraint firstAttribute="height" constant="37" id="aLi-pL-ZMq"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="chevron.backward" catalog="system">
+                                            <color key="baseBackgroundColor" name="BackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="me1-LM-Tid" eventType="touchUpInside" id="qvP-9k-1d1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwY-7G-UEb">
+                                        <rect key="frame" x="94" y="0.0" width="137.5" height="37"/>
+                                        <fontDescription key="fontDescription" name="MarkPro-Medium" family="Mark Pro" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWc-QH-Uf4">
+                                        <rect key="frame" x="288" y="0.0" width="42" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="95O-Nt-9oT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="bagIcon">
+                                            <color key="baseBackgroundColor" name="AccentColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7xM-7B-Yaw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7xM-7B-Yaw" firstAttribute="trailing" secondItem="CDl-Bf-gkR" secondAttribute="trailing" constant="42" id="7cR-yg-jyb"/>
+                            <constraint firstItem="CDl-Bf-gkR" firstAttribute="top" secondItem="7xM-7B-Yaw" secondAttribute="top" constant="10" id="N8q-sg-S3M"/>
+                            <constraint firstItem="CDl-Bf-gkR" firstAttribute="leading" secondItem="7xM-7B-Yaw" secondAttribute="leading" constant="42" id="vD8-PM-NeJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xbV-tl-kox"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRC-3p-Zc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="98"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bagIcon" width="18" height="18"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="filterIcon" width="11" height="13"/>

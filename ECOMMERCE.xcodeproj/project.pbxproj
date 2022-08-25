@@ -26,6 +26,13 @@
 		6589EBBC28B75F57002693D9 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 6589EBBB28B75F57002693D9 /* iOSDropDown */; };
 		6589EBBE28B771DF002693D9 /* DropDownsSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBBD28B771DF002693D9 /* DropDownsSetupable.swift */; };
 		6589EBC028B773B9002693D9 /* FilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBBF28B773B9002693D9 /* FilterOptions.swift */; };
+		6589EBC228B78489002693D9 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBC128B78489002693D9 /* ProductDetailsViewController.swift */; };
+		6589EBC428B7D125002693D9 /* BindMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBC328B7D125002693D9 /* BindMainViewModel.swift */; };
+		6589EBC828B7D23F002693D9 /* SetupMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBC728B7D23F002693D9 /* SetupMainViewController.swift */; };
+		6589EBCA28B7D2CC002693D9 /* SetupMainViewControllerCollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBC928B7D2CC002693D9 /* SetupMainViewControllerCollectionViews.swift */; };
+		6589EBCC28B7D32A002693D9 /* MainViewControllerCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBCB28B7D32A002693D9 /* MainViewControllerCollectionViewDataSource.swift */; };
+		6589EBCE28B7D399002693D9 /* MainViewControllerCollectionViewsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBCD28B7D399002693D9 /* MainViewControllerCollectionViewsDelegate.swift */; };
+		6589EBD028B7D3CD002693D9 /* SetupMainViewControllerDropDowns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBCF28B7D3CD002693D9 /* SetupMainViewControllerDropDowns.swift */; };
 		65D1519228B2078800328084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1519128B2078800328084 /* AppDelegate.swift */; };
 		65D1519428B2078800328084 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1519328B2078800328084 /* SceneDelegate.swift */; };
 		65D1519928B2078800328084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D1519728B2078800328084 /* Main.storyboard */; };
@@ -80,6 +87,13 @@
 		6589EBB428B4C7B0002693D9 /* BestSellerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestSellerViewCell.xib; sourceTree = "<group>"; };
 		6589EBBD28B771DF002693D9 /* DropDownsSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownsSetupable.swift; sourceTree = "<group>"; };
 		6589EBBF28B773B9002693D9 /* FilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptions.swift; sourceTree = "<group>"; };
+		6589EBC128B78489002693D9 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		6589EBC328B7D125002693D9 /* BindMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindMainViewModel.swift; sourceTree = "<group>"; };
+		6589EBC728B7D23F002693D9 /* SetupMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupMainViewController.swift; sourceTree = "<group>"; };
+		6589EBC928B7D2CC002693D9 /* SetupMainViewControllerCollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupMainViewControllerCollectionViews.swift; sourceTree = "<group>"; };
+		6589EBCB28B7D32A002693D9 /* MainViewControllerCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		6589EBCD28B7D399002693D9 /* MainViewControllerCollectionViewsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerCollectionViewsDelegate.swift; sourceTree = "<group>"; };
+		6589EBCF28B7D3CD002693D9 /* SetupMainViewControllerDropDowns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupMainViewControllerDropDowns.swift; sourceTree = "<group>"; };
 		65D1518E28B2078800328084 /* ECOMMERCE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECOMMERCE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D1519128B2078800328084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65D1519328B2078800328084 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +188,27 @@
 			path = BestSellerCell;
 			sourceTree = "<group>";
 		};
+		6589EBC528B7D1D2002693D9 /* MainViewController Extansions */ = {
+			isa = PBXGroup;
+			children = (
+				6589EBC328B7D125002693D9 /* BindMainViewModel.swift */,
+				6589EBC728B7D23F002693D9 /* SetupMainViewController.swift */,
+				6589EBC928B7D2CC002693D9 /* SetupMainViewControllerCollectionViews.swift */,
+				6589EBCB28B7D32A002693D9 /* MainViewControllerCollectionViewDataSource.swift */,
+				6589EBCD28B7D399002693D9 /* MainViewControllerCollectionViewsDelegate.swift */,
+				6589EBCF28B7D3CD002693D9 /* SetupMainViewControllerDropDowns.swift */,
+			);
+			path = "MainViewController Extansions";
+			sourceTree = "<group>";
+		};
+		6589EBC628B7D1EA002693D9 /* Extansions */ = {
+			isa = PBXGroup;
+			children = (
+				6589EBC528B7D1D2002693D9 /* MainViewController Extansions */,
+			);
+			path = Extansions;
+			sourceTree = "<group>";
+		};
 		65D1518528B2078700328084 = {
 			isa = PBXGroup;
 			children = (
@@ -195,8 +230,9 @@
 			children = (
 				65D1519128B2078800328084 /* AppDelegate.swift */,
 				65D1519328B2078800328084 /* SceneDelegate.swift */,
-				6589EBAC28B36B5C002693D9 /* Protocols */,
 				65D1520A28B213E700328084 /* Supporting files */,
+				6589EBAC28B36B5C002693D9 /* Protocols */,
+				6589EBC628B7D1EA002693D9 /* Extansions */,
 				65D151A728B207C500328084 /* Models */,
 				65D151AC28B20B0F00328084 /* ViewModels */,
 				65D151B028B20C6F00328084 /* Views */,
@@ -237,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				65D1520D28B236E400328084 /* MainViewController.swift */,
+				6589EBC128B78489002693D9 /* ProductDetailsViewController.swift */,
 				65D1521528B23A5A00328084 /* CategoryCell */,
 				6589EB9628B36408002693D9 /* HotSalesCell */,
 				6589EBB728B4C7B8002693D9 /* BestSellerCell */,
@@ -417,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6589EBC428B7D125002693D9 /* BindMainViewModel.swift in Sources */,
 				6589EBC028B773B9002693D9 /* FilterOptions.swift in Sources */,
 				65D1520E28B236E400328084 /* MainViewController.swift in Sources */,
 				6589EBB228B4AC7E002693D9 /* CollectionViewSetupable.swift in Sources */,
@@ -424,15 +462,21 @@
 				65D151A928B2083200328084 /* Dynamic.swift in Sources */,
 				65D1521328B237E800328084 /* CategoryViewCell.swift in Sources */,
 				6589EBBE28B771DF002693D9 /* DropDownsSetupable.swift in Sources */,
+				6589EBD028B7D3CD002693D9 /* SetupMainViewControllerDropDowns.swift in Sources */,
+				6589EBCC28B7D32A002693D9 /* MainViewControllerCollectionViewDataSource.swift in Sources */,
 				6589EBAB28B36B44002693D9 /* ViewModelBindable.swift in Sources */,
 				65D1519228B2078800328084 /* AppDelegate.swift in Sources */,
+				6589EBC228B78489002693D9 /* ProductDetailsViewController.swift in Sources */,
 				65D151A628B207BD00328084 /* MainProducts.swift in Sources */,
 				65D1521728B23CC700328084 /* Category.swift in Sources */,
 				6589EBAE28B3721F002693D9 /* ViewControllerSetupable.swift in Sources */,
+				6589EBCA28B7D2CC002693D9 /* SetupMainViewControllerCollectionViews.swift in Sources */,
 				65D151AF28B20B3100328084 /* Constants.swift in Sources */,
+				6589EBCE28B7D399002693D9 /* MainViewControllerCollectionViewsDelegate.swift in Sources */,
 				65D1519428B2078800328084 /* SceneDelegate.swift in Sources */,
 				65D151AB28B209DC00328084 /* MainViewModel.swift in Sources */,
 				6589EBB528B4C7B0002693D9 /* BestSellerViewCell.swift in Sources */,
+				6589EBC828B7D23F002693D9 /* SetupMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
