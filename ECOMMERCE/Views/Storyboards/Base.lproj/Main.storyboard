@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,6 +15,9 @@
         </array>
         <array key="MarkPro-Medium.otf">
             <string>MarkPro-Medium</string>
+        </array>
+        <array key="MarkPro.otf">
+            <string>MarkPro</string>
         </array>
     </customFonts>
     <scenes>
@@ -44,7 +48,7 @@
                                             </children>
                                         </menu>
                                         <state key="normal" title="Zihuatanejo, Gro">
-                                            <color key="titleColor" red="0.0039215686269999999" green="0.0" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="BackgroundColor"/>
                                         </state>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MiV-Ga-XSF">
@@ -71,7 +75,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlx-TX-I9a">
                                 <rect key="frame" x="17" y="94" width="197.5" height="32"/>
                                 <fontDescription key="fontDescription" name="MarkPro-Bold" family="Mark Pro" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="BackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSH-OP-a1O">
@@ -84,7 +88,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot sales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t3-EK-GcT">
                                 <rect key="frame" x="17" y="339" width="113.5" height="32"/>
                                 <fontDescription key="fontDescription" name="MarkPro-Bold" family="Mark Pro" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="BackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yH1-QI-zrc">
@@ -147,7 +151,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best seller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLV-sO-uhL">
                                 <rect key="frame" x="17" y="585" width="126" height="32"/>
                                 <fontDescription key="fontDescription" name="MarkPro-Bold" family="Mark Pro" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="BackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnM-SZ-PVq">
@@ -220,6 +224,138 @@
                                     <constraint firstItem="rF5-Se-QLH" firstAttribute="centerY" secondItem="wvv-JS-ccb" secondAttribute="centerY" id="sZk-VK-Gpe"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Gh-9F-LHP">
+                                <rect key="frame" x="0.0" y="521" width="414" height="375"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="0iQ-E5-nmM">
+                                        <rect key="frame" x="42.5" y="24" width="329.5" height="37"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lp-bP-V2V">
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" id="cjc-4T-JBa"/>
+                                                    <constraint firstAttribute="height" constant="37" id="ubS-0J-L1Y"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="quitIcon">
+                                                    <color key="baseBackgroundColor" name="BackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="filterQuitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="szJ-4W-jfX"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmT-CI-L9M">
+                                                <rect key="frame" x="97.5" y="7" width="118" height="23"/>
+                                                <fontDescription key="fontDescription" name="MarkPro-Medium" family="Mark Pro" pointSize="18"/>
+                                                <color key="textColor" name="BackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB8-oC-zDy">
+                                                <rect key="frame" x="259.5" y="0.0" width="70" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="gdv-ev-Dac"/>
+                                                    <constraint firstAttribute="height" constant="37" id="ysQ-I1-ykf"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Done">
+                                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VdC-Nd-Rcd">
+                                        <rect key="frame" x="42" y="101" width="330" height="246"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFp-rF-qds">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="23"/>
+                                                <fontDescription key="fontDescription" name="MarkPro-Medium" family="Mark Pro" pointSize="18"/>
+                                                <color key="textColor" name="BackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nr8-Da-JuS" customClass="DropDown" customModule="iOSDropDown">
+                                                <rect key="frame" x="0.0" y="38" width="330" height="34"/>
+                                                <color key="textColor" name="BackgroundColor"/>
+                                                <fontDescription key="fontDescription" name="MarkPro" family="Mark Pro" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
+                                                        <real key="value" value="37"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="arrowSize">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
+                                                        <color key="value" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ei-hf-od8">
+                                                <rect key="frame" x="0.0" y="87" width="44" height="23"/>
+                                                <fontDescription key="fontDescription" name="MarkPro-Medium" family="Mark Pro" pointSize="18"/>
+                                                <color key="textColor" name="BackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7P-ko-zhl" customClass="DropDown" customModule="iOSDropDown">
+                                                <rect key="frame" x="0.0" y="125" width="330" height="34"/>
+                                                <color key="textColor" name="BackgroundColor"/>
+                                                <fontDescription key="fontDescription" name="MarkPro" family="Mark Pro" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
+                                                        <real key="value" value="37"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="arrowSize">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
+                                                        <color key="value" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np9-Tt-LMY">
+                                                <rect key="frame" x="0.0" y="174" width="36.5" height="23"/>
+                                                <fontDescription key="fontDescription" name="MarkPro-Medium" family="Mark Pro" pointSize="18"/>
+                                                <color key="textColor" name="BackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFB-zz-AQt" customClass="DropDown" customModule="iOSDropDown">
+                                                <rect key="frame" x="0.0" y="212" width="330" height="34"/>
+                                                <color key="textColor" name="BackgroundColor"/>
+                                                <fontDescription key="fontDescription" name="MarkPro" family="Mark Pro" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
+                                                        <real key="value" value="37"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="arrowSize">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
+                                                        <color key="value" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Nr8-Da-JuS" secondAttribute="trailing" id="7UJ-Tz-8kw"/>
+                                            <constraint firstItem="H7P-ko-zhl" firstAttribute="leading" secondItem="VdC-Nd-Rcd" secondAttribute="leading" id="Qnk-MS-CfZ"/>
+                                            <constraint firstItem="CFB-zz-AQt" firstAttribute="leading" secondItem="VdC-Nd-Rcd" secondAttribute="leading" id="VRm-LY-gZg"/>
+                                            <constraint firstAttribute="trailing" secondItem="CFB-zz-AQt" secondAttribute="trailing" id="XFH-hh-c06"/>
+                                            <constraint firstAttribute="trailing" secondItem="H7P-ko-zhl" secondAttribute="trailing" id="Xx2-mx-ylg"/>
+                                            <constraint firstItem="Nr8-Da-JuS" firstAttribute="leading" secondItem="VdC-Nd-Rcd" secondAttribute="leading" id="sVx-Oh-6XM"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="0iQ-E5-nmM" firstAttribute="centerX" secondItem="1Gh-9F-LHP" secondAttribute="centerX" id="6Kq-0H-Tx4"/>
+                                    <constraint firstItem="VdC-Nd-Rcd" firstAttribute="top" secondItem="0iQ-E5-nmM" secondAttribute="bottom" constant="40" id="S5P-fC-FXX"/>
+                                    <constraint firstItem="VdC-Nd-Rcd" firstAttribute="leading" secondItem="1Gh-9F-LHP" secondAttribute="leading" constant="42" id="c2D-JB-50R"/>
+                                    <constraint firstAttribute="trailing" secondItem="VdC-Nd-Rcd" secondAttribute="trailing" constant="42" id="hgi-Ju-oWS"/>
+                                    <constraint firstItem="0iQ-E5-nmM" firstAttribute="top" secondItem="1Gh-9F-LHP" secondAttribute="top" constant="24" id="j0z-me-0oz"/>
+                                    <constraint firstAttribute="height" constant="375" id="peC-al-yk8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -231,11 +367,13 @@
                             <constraint firstItem="mlx-TX-I9a" firstAttribute="top" secondItem="7nj-fT-NPp" secondAttribute="bottom" constant="18" id="AmC-wf-Pgd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yH1-QI-zrc" secondAttribute="trailing" constant="17" id="BOX-my-MFf"/>
                             <constraint firstAttribute="bottom" secondItem="wvv-JS-ccb" secondAttribute="bottom" id="Cuf-dV-T5C"/>
+                            <constraint firstItem="1Gh-9F-LHP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DVL-Md-Vqi"/>
                             <constraint firstItem="EtJ-Di-25P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EXh-sX-W8Y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wvv-JS-ccb" secondAttribute="trailing" id="EaJ-D1-p7Y"/>
                             <constraint firstItem="BvD-Ur-Onv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="HQG-ys-gYQ"/>
                             <constraint firstItem="7nj-fT-NPp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LkA-wF-qSZ"/>
                             <constraint firstItem="yH1-QI-zrc" firstAttribute="top" secondItem="mlx-TX-I9a" secondAttribute="bottom" constant="25" id="NTN-WN-qN4"/>
+                            <constraint firstAttribute="bottom" secondItem="1Gh-9F-LHP" secondAttribute="bottom" id="NmC-mC-OQv"/>
                             <constraint firstItem="zLV-sO-uhL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="OMV-nL-HWD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aSH-OP-a1O" secondAttribute="trailing" constant="20" id="TYL-Dg-qLf"/>
                             <constraint firstItem="7nj-fT-NPp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UQ8-pD-J8c"/>
@@ -257,17 +395,22 @@
                             <constraint firstItem="aGz-qP-1oO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="riS-oK-wC0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mnh-Xj-35R" secondAttribute="trailing" constant="20" id="vqp-t3-jkI"/>
                             <constraint firstItem="i6b-j5-AxQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="wTi-Tr-IHS"/>
+                            <constraint firstItem="1Gh-9F-LHP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wn8-Di-HYO"/>
                             <constraint firstItem="wvv-JS-ccb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z2q-k3-cp0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bestSellerCollectionView" destination="EtJ-Di-25P" id="OG0-9a-hfw"/>
+                        <outlet property="brandDropDown" destination="Nr8-Da-JuS" id="SzC-qI-60N"/>
                         <outlet property="categoryCollectionView" destination="yH1-QI-zrc" id="bLn-gZ-8Dp"/>
+                        <outlet property="filterOptionsView" destination="1Gh-9F-LHP" id="nnP-fP-mJE"/>
                         <outlet property="footerView" destination="wvv-JS-ccb" id="XBO-1T-yg8"/>
                         <outlet property="hotSalesCollectionView" destination="aGz-qP-1oO" id="BIY-Lb-QJr"/>
                         <outlet property="locationPullDownButton" destination="FqX-6R-CBG" id="3Bc-Ap-4Og"/>
+                        <outlet property="priceDropDown" destination="H7P-ko-zhl" id="nNo-aJ-oKK"/>
                         <outlet property="qrButton" destination="qbQ-al-KhM" id="tAh-L6-T15"/>
                         <outlet property="searchBar" destination="Aej-oK-Iel" id="RIe-R5-Qte"/>
+                        <outlet property="sizeDropDown" destination="CFB-zz-AQt" id="fSE-lH-RmL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -283,12 +426,16 @@
         <image name="heartIcon" width="19" height="17"/>
         <image name="locationIcon" width="12" height="16"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>
+        <image name="quitIcon" width="11" height="11"/>
         <image name="userIcon" width="18" height="18"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.43137254901960786" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.4309999942779541" blue="0.3059999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BackgroundColor">
             <color red="0.0040000001899898052" green="0.0" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

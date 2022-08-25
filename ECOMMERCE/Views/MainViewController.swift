@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import iOSDropDown
 
 final class MainViewController: UIViewController {
     @IBOutlet weak var locationPullDownButton: UIButton!
@@ -15,6 +16,11 @@ final class MainViewController: UIViewController {
     @IBOutlet weak var hotSalesCollectionView: UICollectionView!
     @IBOutlet weak var bestSellerCollectionView: UICollectionView!
     @IBOutlet weak var footerView: UIView!
+    
+    @IBOutlet weak var filterOptionsView: UIView!
+    @IBOutlet weak var brandDropDown: DropDown!
+    @IBOutlet weak var priceDropDown: DropDown!
+    @IBOutlet weak var sizeDropDown: DropDown!
     
     private let viewModel: MainViewModel = MainViewModel()
     
@@ -37,6 +43,15 @@ final class MainViewController: UIViewController {
     }
     
     @IBAction func filterButtonPressed(_ sender: UIButton) {
+        UIView.transition(with: filterOptionsView,
+                          duration: 0.4,
+                          options: .transitionFlipFromBottom,
+                          animations: { self.filterOptionsView.isHidden = !self.filterOptionsView.isHidden },
+                          completion: nil)
+    }
+    
+    @IBAction func filterQuitButtonPressed(_ sender: UIButton) {
+        filterOptionsView.isHidden = true
     }
 }
 
@@ -81,6 +96,7 @@ extension MainViewController: ViewControllerSetupable {
         setupBestSellerCollectionView()
         setupSerachBar()
         setupQrButton()
+        setupFilterOptions()
         setupFooter()
     }
     
@@ -113,6 +129,11 @@ extension MainViewController: ViewControllerSetupable {
     
     private func setupQrButton() {
         qrButton.layer.cornerRadius = 16
+    }
+    
+    private func setupFilterOptions() {
+        filterOptionsView.layer.cornerRadius = 30
+        setupDropDowns()
     }
     
     private func setupFooter() {
@@ -238,5 +259,26 @@ extension MainViewController: UICollectionViewDelegate {
         for index in categories.indices {
             categories[index].isSelect = false
         }
+    }
+}
+
+// MARK: - DropDownsSetupable
+extension MainViewController: DropDownsSetupable {
+    internal func setupDropDowns() {
+        setupBrandDropDown()
+        setupPriceDropDown()
+        setupSizeDropDown()
+    }
+    
+    private func setupBrandDropDown() {
+        brandDropDown.optionArray = FilterOptions.testData.brands
+    }
+    
+    private func setupPriceDropDown() {
+        priceDropDown.optionArray = FilterOptions.testData.pricesRange
+    }
+    
+    private func setupSizeDropDown() {
+        sizeDropDown.optionArray = FilterOptions.testData.sizes
     }
 }

@@ -23,6 +23,9 @@
 		6589EBB228B4AC7E002693D9 /* CollectionViewSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBB128B4AC7E002693D9 /* CollectionViewSetupable.swift */; };
 		6589EBB528B4C7B0002693D9 /* BestSellerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBB328B4C7B0002693D9 /* BestSellerViewCell.swift */; };
 		6589EBB628B4C7B0002693D9 /* BestSellerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6589EBB428B4C7B0002693D9 /* BestSellerViewCell.xib */; };
+		6589EBBC28B75F57002693D9 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 6589EBBB28B75F57002693D9 /* iOSDropDown */; };
+		6589EBBE28B771DF002693D9 /* DropDownsSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBBD28B771DF002693D9 /* DropDownsSetupable.swift */; };
+		6589EBC028B773B9002693D9 /* FilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589EBBF28B773B9002693D9 /* FilterOptions.swift */; };
 		65D1519228B2078800328084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1519128B2078800328084 /* AppDelegate.swift */; };
 		65D1519428B2078800328084 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1519328B2078800328084 /* SceneDelegate.swift */; };
 		65D1519928B2078800328084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D1519728B2078800328084 /* Main.storyboard */; };
@@ -75,6 +78,8 @@
 		6589EBB128B4AC7E002693D9 /* CollectionViewSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSetupable.swift; sourceTree = "<group>"; };
 		6589EBB328B4C7B0002693D9 /* BestSellerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerViewCell.swift; sourceTree = "<group>"; };
 		6589EBB428B4C7B0002693D9 /* BestSellerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestSellerViewCell.xib; sourceTree = "<group>"; };
+		6589EBBD28B771DF002693D9 /* DropDownsSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownsSetupable.swift; sourceTree = "<group>"; };
+		6589EBBF28B773B9002693D9 /* FilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptions.swift; sourceTree = "<group>"; };
 		65D1518E28B2078800328084 /* ECOMMERCE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECOMMERCE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D1519128B2078800328084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65D1519328B2078800328084 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6589EBBC28B75F57002693D9 /* iOSDropDown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +160,7 @@
 				6589EBAA28B36B44002693D9 /* ViewModelBindable.swift */,
 				6589EBAD28B3721F002693D9 /* ViewControllerSetupable.swift */,
 				6589EBB128B4AC7E002693D9 /* CollectionViewSetupable.swift */,
+				6589EBBD28B771DF002693D9 /* DropDownsSetupable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -204,6 +211,7 @@
 			children = (
 				65D151A528B207BD00328084 /* MainProducts.swift */,
 				65D1521628B23CC700328084 /* Category.swift */,
+				6589EBBF28B773B9002693D9 /* FilterOptions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,6 +325,7 @@
 			);
 			name = ECOMMERCE;
 			packageProductDependencies = (
+				6589EBBB28B75F57002693D9 /* iOSDropDown */,
 			);
 			productName = ECOMMERCE;
 			productReference = 65D1518E28B2078800328084 /* ECOMMERCE.app */;
@@ -347,6 +356,7 @@
 			);
 			mainGroup = 65D1518528B2078700328084;
 			packageReferences = (
+				6589EBBA28B75F57002693D9 /* XCRemoteSwiftPackageReference "iOSDropDown" */,
 			);
 			productRefGroup = 65D1518F28B2078800328084 /* Products */;
 			projectDirPath = "";
@@ -407,11 +417,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6589EBC028B773B9002693D9 /* FilterOptions.swift in Sources */,
 				65D1520E28B236E400328084 /* MainViewController.swift in Sources */,
 				6589EBB228B4AC7E002693D9 /* CollectionViewSetupable.swift in Sources */,
 				6589EB9428B36403002693D9 /* HotSalesViewCell.swift in Sources */,
 				65D151A928B2083200328084 /* Dynamic.swift in Sources */,
 				65D1521328B237E800328084 /* CategoryViewCell.swift in Sources */,
+				6589EBBE28B771DF002693D9 /* DropDownsSetupable.swift in Sources */,
 				6589EBAB28B36B44002693D9 /* ViewModelBindable.swift in Sources */,
 				65D1519228B2078800328084 /* AppDelegate.swift in Sources */,
 				65D151A628B207BD00328084 /* MainProducts.swift in Sources */,
@@ -640,6 +652,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6589EBBA28B75F57002693D9 /* XCRemoteSwiftPackageReference "iOSDropDown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jriosdev/iOSDropDown.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6589EBBB28B75F57002693D9 /* iOSDropDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6589EBBA28B75F57002693D9 /* XCRemoteSwiftPackageReference "iOSDropDown" */;
+			productName = iOSDropDown;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 65D1518628B2078700328084 /* Project object */;
 }
